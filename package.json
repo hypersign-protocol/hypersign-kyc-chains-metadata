@@ -1,0 +1,8 @@
+{
+  "name": "@hypersign-protocol/hypersign-kyc-chains-metadata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hypersign-protocol/hypersign-kyc-chains-metadata.git",
+  "author": "vishwas1 <vishwasanand.cse@gmail.com>",
+  "license": "MIT"
+}
