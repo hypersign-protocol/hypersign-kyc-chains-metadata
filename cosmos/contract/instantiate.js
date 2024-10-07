@@ -5,9 +5,10 @@ export async function smartContractCodeInstantiateRPC(
     codeId,
     instantiateMsg,
     smartContractlabel,
+    fee,
 ) {
     // Set the inital fee
-    const fee = {
+    const fees = fee ? fee : {
         amount: [
             {
                 denom: coinDenom,
@@ -24,7 +25,7 @@ export async function smartContractCodeInstantiateRPC(
             parseInt(codeId),
             instantiateMsg,
             smartContractlabel,
-            fee
+            fees
         )
         alert("Transaction Successful: " + txResult["transactionHash"]);
         const contractAddress = txResult["contractAddress"]

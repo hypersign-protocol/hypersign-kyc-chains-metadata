@@ -4,9 +4,10 @@ export async function smartContractExecuteRPC(
     userAddress,
     contractAddress,
     executeMsg,
+    fee
 ) {
     // Set the inital fee
-    const fee = {
+    const fees = fee ? fee : {
         amount: [
             {
                 denom: coinDenom,
@@ -20,7 +21,7 @@ export async function smartContractExecuteRPC(
         userAddress,
         contractAddress,
         executeMsg,
-        fee
+        fees
     )
 
     return txResult
