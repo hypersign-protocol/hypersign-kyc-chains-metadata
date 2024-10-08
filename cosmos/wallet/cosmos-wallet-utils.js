@@ -29,19 +29,21 @@ export function getCosmosBlockchainBech32Prefix(chain) {
 }
 
 export const HYPERSIGN_PROOF_TYPES = Object.freeze({
-    ProofOfPersonhood: {
+    zkProofOfPersonHood: {
         type: "proof_of_personhood",
         description: "Proves that user is not a bot",
-        bgColor: "E5FFCC",
+        bgColor: "#E5FFCC",
         sbtCode: "T1",
         image: "https://cdn-icons-png.flaticon.com/128/1077/1077114.png",
+        credentialType: ["PersonhoodCredential"]
     },
-    ProofOfKYC: {
+    zkProofOfKYC: {
         type: "proof_of_k_y_c",
         description: "Proves that user has finished his/her KYC",
         bgColor: "#CCE5FF",
         sbtCode: "T2",
-        image: "https://cdn-icons-png.flaticon.com/128/17442/17442784.png"
+        image: "https://cdn-icons-png.flaticon.com/128/17442/17442784.png",
+        credentialType: ["PassportCredential"]
     },
     // ProofOfCitizenship: {
     //     type: "proof_of_citizenship",
