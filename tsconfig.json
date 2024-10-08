@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "cosmos-nibi-nibiru-testnet-1": ["plugins/cosmos-nibi-nibiru-testnet-1/src/"]
+    }
+  },
+  "include": ["."],
+
+}

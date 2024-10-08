@@ -1,8 +1,23 @@
 {
   "name": "@hypersign-protocol/hypersign-kyc-chains-metadata",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/hypersign-protocol/hypersign-kyc-chains-metadata.git",
   "author": "vishwas1 <vishwasanand.cse@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "workspaces": [
+    "plugins/*"
+  ],
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "lerna": "^8.1.8",
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.2"
+  }
 }
