@@ -3,13 +3,16 @@ import { Uint53 } from "@cosmjs/math";
 import {
     GasPrice, coins
 } from "@cosmjs/stargate";
+import ChainJSON  from '../schema/chains.json'
 
-import { PluginWallet } from '../HypersignOnChainKYCPluginInterface';
+import { IChainJson, PluginWallet } from '../HypersignOnChainKYCPluginInterface';
 
 export class NibiruTestnetPluginWallet extends PluginWallet{
 
+    CHAIN_JSON: IChainJson;
     constructor(){
         super()
+        this.CHAIN_JSON = ChainJSON[0]
     }
 
     async createClient(rpcUrl: string, offlineSigner: any) {

@@ -1,16 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
-    "module": "CommonJS",
+    "target": "ES5",
+    "module": "NodeNext",
     "strict": true,
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
+    "moduleResolution": "NodeNext",
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist",
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "cosmos-nibi-nibiru-testnet-1": ["plugins/cosmos-nibi-nibiru-testnet-1/src/"]
+      "cosmos-nibi-nibiru-testnet-1": ["plugins/cosmos-nibi-nibiru-testnet-1/src/"],
+      "cosmos-osmo-osmo-test-5": ["plugins/cosmos-osmo-osmo-test-5/src/"],
     }
   },
   "include": ["."],

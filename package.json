@@ -4,20 +4,21 @@
   "repository": "https://github.com/hypersign-protocol/hypersign-kyc-chains-metadata.git",
   "author": "vishwas1 <vishwasanand.cse@gmail.com>",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "./dist/bundle.js",
   "scripts": {
-    "build": "tsc",
+    "build": "lerna run build --parallel && npm run build:root",
+    "build:root": "webpack --config webpack.config.js",
     "start": "node dist/index.js"
   },
   "workspaces": [
     "plugins/*"
   ],
-  "dependencies": {
-    
-  },
   "devDependencies": {
-    "lerna": "^8.1.8",
     "@types/node": "^22.7.5",
-    "typescript": "^5.6.2"
+    "lerna": "^8.1.8",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   }
 }

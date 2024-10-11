@@ -1,0 +1,60 @@
+[
+    {
+        "chainId": "osmo-test-5",
+        "chainName": "Osmosis (testnet)",
+        "rpc": "https://rpc.testnet.osmosis.zone",
+        "rest": "https://lcd.testnet.osmosis.zone",
+        "stakeCurrency": {
+            "coinDenom": "OSMO",
+            "coinMinimalDenom": "uosmo",
+            "coinDecimals": 6,
+            "coinGeckoId": "osmo",
+            "coinImageUrl": "https://app.osmosis.zone/tokens/generated/osmo.svg"
+        },
+        "bip44": {
+            "coinType": 118
+        },
+        "bech32Config": {
+            "bech32PrefixAccAddr": "osmo",
+            "bech32PrefixAccPub": "osmopub",
+            "bech32PrefixValAddr": "osmovaloper",
+            "bech32PrefixValPub": "osmovaloperpub",
+            "bech32PrefixConsAddr": "osmovalcons",
+            "bech32PrefixConsPub": "osmovalconspub"
+        },
+        "currencies": [
+            {
+                "coinDenom": "OSMO",
+                "coinMinimalDenom": "uosmo",
+                "coinDecimals": 6,
+                "coinGeckoId": "osmo",
+                "coinImageUrl": "https://app.osmosis.zone/tokens/generated/osmo.svg"
+            }
+        ],
+        "feeCurrencies": [
+            {
+                "coinDenom": "OSMO",
+                "coinMinimalDenom": "uosmo",
+                "coinDecimals": 6,
+                "coinGeckoId": "osmo",
+                "coinImageUrl": "https://app.osmosis.zone/tokens/generated/osmo.svg"
+            }
+        ],
+        "coinType": 119,
+        "gasPriceStep": {
+            "low": 0.01,
+            "average": 0.1,
+            "high": 0.04
+        },
+        "features": [
+            "ibc-transfer",
+            "ibc-go",
+            "cosmwasm"
+        ],
+        "txExplorer": {
+            "name": "Local",
+            "txUrl": "https://rpc.testnet.osmosis.zone/tx?hash={txHash}",
+            "themeColor": "white"
+        }
+    }
+]

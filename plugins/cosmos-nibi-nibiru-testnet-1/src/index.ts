@@ -4,7 +4,7 @@ import { NibiruTestnetPluginContract } from "./contract/NibiruTestnetPluginContr
 import { NibiruTestnetPluginContractMessage } from "./contract/NibiruTestnetPluginContractMessage";
 import { NibiruTestnetPluginWallet } from "./wallet/NibiruTestnetPluginWallet";
 
-export default class NibiruTestnetPlugin extends HypersignOnChainKYCPlugin {
+export default  class NibiruTestnetPlugin extends HypersignOnChainKYCPlugin {
     pluginWallet: NibiruTestnetPluginWallet;
     pluginContract: NibiruTestnetPluginContract;
     pluginConfig: NibiruTestnetPluginConfig;
@@ -18,5 +18,8 @@ export default class NibiruTestnetPlugin extends HypersignOnChainKYCPlugin {
     }
 }
 
+// export {
+//     NibiruTestnetPlugin
+// }
 
 

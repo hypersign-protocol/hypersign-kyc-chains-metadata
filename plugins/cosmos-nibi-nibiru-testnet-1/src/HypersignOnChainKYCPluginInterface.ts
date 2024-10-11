@@ -30,22 +30,6 @@ export abstract class PluginConfig {
 
         }
     }
-
-    async getUserAddressFromOfflineSigner(offlineSigner: any): Promise<any> {
-        const accounts = await offlineSigner.getAccounts();
-        const userAddress = accounts[0].address;
-        return userAddress
-    }
-
-    // blockchainLabel
-    // cosmos:<bech32PrefixAccAddr>:<chainid>
-    getCosmosBlockchainLabel(chain: any): string {
-        return 'cosmos:' + chain.bech32Config.bech32PrefixAccAddr + ':' + chain.chainId
-    }
-
-    getCosmosBlockchainBech32Prefix(chain: any): string {
-        return chain.bech32Config.bech32PrefixAccAddr
-    }
 }
 
 export abstract class PluginContract {
@@ -80,10 +64,82 @@ export abstract class PluginContractMessage {
     abstract constructQuerySBTContractMetadata(): object;
 }
 
+
+
+export interface IStakeCurrency {
+    coinDenom: string; 
+    coinMinimalDenom: string; 
+    coinDecimals: number; 
+    coinGeckoId: string; 
+    coinImageUrl: string; 
+}
+export interface IBech32Config {
+    bech32PrefixAccAddr: string;
+    bech32PrefixAccPub: string;
+    bech32PrefixValAddr: string;
+    bech32PrefixValPub: string;
+    bech32PrefixConsAddr: string;
+    bech32PrefixConsPub: string;
+}
+export interface IChainJson {
+    chainId: string;
+    chainName: string;
+    rpc: string;
+    rest: string;
+    stakeCurrency: IStakeCurrency; 
+    bip44: object; 
+    bech32Config: IBech32Config;
+    currencies: Array<object>;
+    feeCurrencies: Array<object>;
+    gasPriceStep: object; 
+    coinType: number; 
+    features: Array<string>;
+    txExplorer: Object;
+}
+export interface IChainInfo {
+    logo: string;
+    chainName: string; 
+    chainId: string;
+    chainLabel: string;
+}
+
 export abstract class PluginWallet {
+    abstract CHAIN_JSON: IChainJson;
     abstract createClient(rpcUrl: string, offlineSigner: any): Promise<any>;
     abstract createNonSigningClient(rpcUrl: string): Promise<any>;
     abstract calculateFee(gasLimit: any, gasPrice: any): any;
+
+    getChainInfo(): IChainInfo{
+        return {
+            logo: this.CHAIN_JSON.stakeCurrency.coinImageUrl,
+            chainName: this.CHAIN_JSON.chainName,
+            chainId: this.CHAIN_JSON.chainId,
+            chainLabel: this.getCosmosBlockchainLabel()
+        }
+    }
+
+    getChainEndpoints(): Object{
+        return {
+            rest: this.CHAIN_JSON.rest,
+            rpc: this.CHAIN_JSON.rpc,
+        }
+    }
+
+    async getUserAddressFromOfflineSigner(offlineSigner: any): Promise<any> {
+        const accounts = await offlineSigner.getAccounts();
+        const userAddress = accounts[0].address;
+        return userAddress
+    }
+
+    // blockchainLabel
+    // cosmos:<bech32PrefixAccAddr>:<chainid>
+    getCosmosBlockchainLabel(): string {
+        return 'cosmos:' + this.CHAIN_JSON.bech32Config.bech32PrefixAccAddr + ':' + this.CHAIN_JSON.chainId
+    }
+
+    getCosmosBlockchainBech32Prefix(): string {
+        return this.CHAIN_JSON.bech32Config.bech32PrefixAccAddr
+    }
 }
 
 export abstract class HypersignOnChainKYCPlugin {
