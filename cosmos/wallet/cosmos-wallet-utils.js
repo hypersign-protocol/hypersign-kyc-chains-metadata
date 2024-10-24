@@ -32,7 +32,7 @@ export const HYPERSIGN_PROOF_TYPES = Object.freeze({
     zkProofOfPersonHood: {
         type: "proof_of_personhood",
         description: "Proves that user is not a bot",
-        bgColor: "#E5FFCC",
+        bgColor: "#CCE7FF",
         sbtCode: "T1",
         image: "https://cdn-icons-png.flaticon.com/128/1077/1077114.png",
         credentialType: ["PersonhoodCredential"]
@@ -40,10 +40,10 @@ export const HYPERSIGN_PROOF_TYPES = Object.freeze({
     zkProofOfKYC: {
         type: "proof_of_k_y_c",
         description: "Proves that user has finished his/her KYC",
-        bgColor: "#CCE5FF",
+        bgColor: "#E6FFCC",
         sbtCode: "T2",
         image: "https://cdn-icons-png.flaticon.com/128/17442/17442784.png",
-        credentialType: ["PassportCredential"]
+        credentialType: ["PassportCredential","GovernmentIdCredential"]
     },
     // ProofOfCitizenship: {
     //     type: "proof_of_citizenship",
@@ -59,13 +59,15 @@ export const HYPERSIGN_PROOF_TYPES = Object.freeze({
     //     sbtCode: "T4"
 
     // },
-    // ProofOfAge: {
-    //     type: "proof_of_age",
-    //     description: "",
-    //     bgColor: "E5FFCC",
-    //     sbtCode: "T5"
+    zkProofOfAge: {
+        type: "proof_of_age",
+        description: "Proves that user is above certain age",
+        bgColor: "#E6FFDD",
+        sbtCode: "T5",
+        image: "https://cdn-icons-png.flaticon.com/128/17442/17442784.png",
+        credentialType: ["PassportCredential","GovernmentIdCredential"]
 
-    // },
+    },
     // ProofOfNonMembershipCountry: {
     //     type: "proof_of_non_membership_country",
     //     description: "",
