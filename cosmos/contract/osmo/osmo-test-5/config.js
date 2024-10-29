@@ -1,6 +1,6 @@
-export const HYPERSIGN_KYC_FACTORY_CODE_ID = 11320
-export const ISSUER_KYC_CODE_ID = 11319
+export const HYPERSIGN_KYC_FACTORY_CODE_ID = 11322
+export const ISSUER_KYC_CODE_ID = 11321
 export const SBT_TOKEN_CODE_ID = 11160
-export const HYPERSIGN_KYC_FACTORY_CONTRACT_ADDRESS = "osmo1c6cgjpzpyjm5660cutptetgsvqqj4n4jtnejk9gh9zkuap346zkq3ayl88" //"nibi1f5djultkcmtxwyyadkjjjjmcncxf5yxz5qkz4qfjnkwqggrw7pdqe27m2h" //"nibi1yatzc54ln59caxxnj53rff2s359pezx3hqxpzu2tkyl2f9ud9yvsq60lle"
+export const HYPERSIGN_KYC_FACTORY_CONTRACT_ADDRESS = "osmo1mw0w823wrpj4fh7e8jg84gsxd2dvktxwkvghe9d4qmsaq98289jq3hvrvp" //"nibi1f5djultkcmtxwyyadkjjjjmcncxf5yxz5qkz4qfjnkwqggrw7pdqe27m2h" //"nibi1yatzc54ln59caxxnj53rff2s359pezx3hqxpzu2tkyl2f9ud9yvsq60lle"
 
 
