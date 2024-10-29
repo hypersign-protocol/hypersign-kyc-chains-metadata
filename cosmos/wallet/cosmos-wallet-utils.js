@@ -30,17 +30,17 @@ export function getCosmosBlockchainBech32Prefix(chain) {
 
 export const HYPERSIGN_PROOF_TYPES = Object.freeze({
     zkProofOfPersonHood: {
-        type: "proof_of_personhood",
+        type: "zk_proof_of_personhood",
         description: "Proves that user is not a bot",
-        bgColor: "#CCE7FF",
+        bgColor: "#bb7af5",
         sbtCode: "T1",
         image: "https://cdn-icons-png.flaticon.com/128/1077/1077114.png",
         credentialType: ["PersonhoodCredential"]
     },
     zkProofOfKYC: {
-        type: "proof_of_k_y_c",
+        type: "zk_proof_of_k_y_c",
         description: "Proves that user has finished his/her KYC",
-        bgColor: "#E6FFCC",
+        bgColor: "#58c686",
         sbtCode: "T2",
         image: "https://cdn-icons-png.flaticon.com/128/17442/17442784.png",
         credentialType: ["PassportCredential","GovernmentIdCredential"]
@@ -60,9 +60,9 @@ export const HYPERSIGN_PROOF_TYPES = Object.freeze({
 
     // },
     zkProofOfAge: {
-        type: "proof_of_age",
+        type: "zk_proof_of_age",
         description: "Proves that user is above certain age",
-        bgColor: "#E6FFDD",
+        bgColor: "#ffc300",
         sbtCode: "T5",
         image: "https://cdn-icons-png.flaticon.com/128/17442/17442784.png",
         credentialType: ["PassportCredential","GovernmentIdCredential"]
@@ -71,7 +71,7 @@ export const HYPERSIGN_PROOF_TYPES = Object.freeze({
     // ProofOfNonMembershipCountry: {
     //     type: "proof_of_non_membership_country",
     //     description: "",
-    //     bgColor: "E5FFCC",
+    //     bgColor: "#9bf1f5",
     //     sbtCode: "T6"
 
     // },
