@@ -1,6 +1,6 @@
-export const HYPERSIGN_KYC_FACTORY_CODE_ID = 11343
-export const ISSUER_KYC_CODE_ID = 11321
-export const SBT_TOKEN_CODE_ID = 11344
-export const HYPERSIGN_KYC_FACTORY_CONTRACT_ADDRESS = "osmo1try0nrtnevevyx0t8vn5ukrqynhmjfzq64rrz6ytcdhfwjtjjygqftgl6t" //"nibi1f5djultkcmtxwyyadkjjjjmcncxf5yxz5qkz4qfjnkwqggrw7pdqe27m2h" //"nibi1yatzc54ln59caxxnj53rff2s359pezx3hqxpzu2tkyl2f9ud9yvsq60lle"
+export const HYPERSIGN_KYC_FACTORY_CODE_ID = 11355
+export const ISSUER_KYC_CODE_ID = 11354
+export const SBT_TOKEN_CODE_ID = 11356
+export const HYPERSIGN_KYC_FACTORY_CONTRACT_ADDRESS = "osmo1sdxxf9z7xf93gdag76apef6chq7q3tl6f9lv6yge2phwwgxjdqgq4hfp8n" //"nibi1f5djultkcmtxwyyadkjjjjmcncxf5yxz5qkz4qfjnkwqggrw7pdqe27m2h" //"nibi1yatzc54ln59caxxnj53rff2s359pezx3hqxpzu2tkyl2f9ud9yvsq60lle"
 
 
