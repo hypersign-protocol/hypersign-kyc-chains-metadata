@@ -29,19 +29,21 @@ export function getCosmosBlockchainBech32Prefix(chain) {
 }
 
 export const HYPERSIGN_PROOF_TYPES = Object.freeze({
-    ProofOfPersonhood: {
-        type: "proof_of_personhood",
-        description: "Proves that user is not a bot",
-        bgColor: "E5FFCC",
+    zkProofOfPersonHood: {
+        type: "zk_proof_of_personhood",
+        description: "Confirms you are a unique individual, not a bot, enabling secure, privacy-preserving interactions with DApps without sharing personal information.",
+        bgColor: "rgb(187 122 245 / 29%)",
         sbtCode: "T1",
-        image: "https://cdn-icons-png.flaticon.com/128/1077/1077114.png",
+        image: "face-id.png",
+        credentialType: ["PersonhoodCredential"]
     },
-    ProofOfKYC: {
-        type: "proof_of_k_y_c",
-        description: "Proves that user has finished his/her KYC",
-        bgColor: "#CCE5FF",
+    zkProofOfKYC: {
+        type: "zk_proof_of_k_y_c",
+        description: "Proves you've completed KYC using zero-knowledge cryptography, enabling identity verification with DApps while keeping your personal information private",
+        bgColor: "rgb(88 198 134 / 29%)",
         sbtCode: "T2",
-        image: "https://cdn-icons-png.flaticon.com/128/17442/17442784.png"
+        image: "kyc.png",
+        credentialType: ["PassportCredential", "GovernmentIdCredential"]
     },
     // ProofOfCitizenship: {
     //     type: "proof_of_citizenship",
@@ -57,17 +59,19 @@ export const HYPERSIGN_PROOF_TYPES = Object.freeze({
     //     sbtCode: "T4"
 
     // },
-    // ProofOfAge: {
-    //     type: "proof_of_age",
-    //     description: "",
-    //     bgColor: "E5FFCC",
-    //     sbtCode: "T5"
+    zkProofOfAge: {
+        type: "zk_proof_of_age",
+        description: "Verifies that you meets a minimum age requirement without disclosing your exact age or any personal information.",
+        bgColor: "rgb(255 195 0 / 29%)",
+        sbtCode: "T5",
+        image: "calendar.png",
+        credentialType: ["PassportCredential", "GovernmentIdCredential"]
 
-    // },
+    },
     // ProofOfNonMembershipCountry: {
     //     type: "proof_of_non_membership_country",
     //     description: "",
-    //     bgColor: "E5FFCC",
+    //     bgColor: "#9bf1f5",
     //     sbtCode: "T6"
 
     // },

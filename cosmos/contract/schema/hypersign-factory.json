@@ -6,12 +6,32 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "InstantiateMsg",
     "type": "object",
+    "required": [
+      "did_doc",
+      "did_doc_proof",
+      "kyc_contract_code_id",
+      "signature"
+    ],
     "properties": {
       "counter": {
         "default": 0,
         "type": "integer",
         "format": "uint64",
         "minimum": 0.0
+      },
+      "did_doc": {
+        "type": "string"
+      },
+      "did_doc_proof": {
+        "type": "string"
+      },
+      "kyc_contract_code_id": {
+        "type": "integer",
+        "format": "uint64",
+        "minimum": 0.0
+      },
+      "signature": {
+        "type": "string"
       }
     },
     "additionalProperties": false
@@ -29,17 +49,54 @@
           "onboard_issuer": {
             "type": "object",
             "required": [
-              "issuer_did",
-              "issuer_kyc_code_id"
+              "did_doc",
+              "did_doc_proof",
+              "signature"
             ],
             "properties": {
-              "issuer_did": {
+              "did_doc": {
                 "type": "string"
               },
-              "issuer_kyc_code_id": {
+              "did_doc_proof": {
+                "type": "string"
+              },
+              "signature": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "update_issuer_contract_code"
+        ],
+        "properties": {
+          "update_issuer_contract_code": {
+            "type": "object",
+            "required": [
+              "did_doc",
+              "did_doc_proof",
+              "kyc_contract_code_id",
+              "signature"
+            ],
+            "properties": {
+              "did_doc": {
+                "type": "string"
+              },
+              "did_doc_proof": {
+                "type": "string"
+              },
+              "kyc_contract_code_id": {
                 "type": "integer",
                 "format": "uint64",
                 "minimum": 0.0
+              },
+              "signature": {
+                "type": "string"
               }
             },
             "additionalProperties": false
@@ -61,6 +118,40 @@
         "properties": {
           "get_registered_issuer": {
             "type": "object",
+            "required": [
+              "issuer_did"
+            ],
+            "properties": {
+              "issuer_did": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_hypersign_admin_d_i_d"
+        ],
+        "properties": {
+          "get_hypersign_admin_d_i_d": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_issuer_k_y_c_contract_code_i_d"
+        ],
+        "properties": {
+          "get_issuer_k_y_c_contract_code_i_d": {
+            "type": "object",
             "additionalProperties": false
           }
         },
@@ -71,6 +162,36 @@
   "migrate": null,
   "sudo": null,
   "responses": {
+    "get_hypersign_admin_d_i_d": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "HypersignAdminDIDResp",
+      "type": "object",
+      "required": [
+        "did"
+      ],
+      "properties": {
+        "did": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_issuer_k_y_c_contract_code_i_d": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "IssuerKycContractCodeResp",
+      "type": "object",
+      "required": [
+        "kyc_contract_code_id"
+      ],
+      "properties": {
+        "kyc_contract_code_id": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
     "get_registered_issuer": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "title": "RegistredIssuerResp",
@@ -89,7 +210,8 @@
           "type": "object",
           "required": [
             "did",
-            "id"
+            "id",
+            "kyc_contract_code_id"
           ],
           "properties": {
             "did": {
@@ -103,6 +225,11 @@
                 "string",
                 "null"
               ]
+            },
+            "kyc_contract_code_id": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
             }
           },
           "additionalProperties": false

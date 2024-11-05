@@ -7,10 +7,18 @@
     "title": "InstantiateMsg",
     "type": "object",
     "required": [
-      "owner_did"
+      "did_doc",
+      "did_doc_proof",
+      "signature"
     ],
     "properties": {
-      "owner_did": {
+      "did_doc": {
+        "type": "string"
+      },
+      "did_doc_proof": {
+        "type": "string"
+      },
+      "signature": {
         "type": "string"
       }
     },
@@ -28,6 +36,14 @@
         "properties": {
           "mint": {
             "type": "object",
+            "required": [
+              "hypersign_proof"
+            ],
+            "properties": {
+              "hypersign_proof": {
+                "$ref": "#/definitions/HypersignKYCProof"
+              }
+            },
             "additionalProperties": false
           }
         },
@@ -56,7 +72,113 @@
         },
         "additionalProperties": false
       }
-    ]
+    ],
+    "definitions": {
+      "HsZkProof": {
+        "type": "object",
+        "required": [
+          "curve",
+          "pi_a",
+          "pi_b",
+          "pi_c",
+          "protocol"
+        ],
+        "properties": {
+          "curve": {
+            "$ref": "#/definitions/HsZkProtocolsCurvs"
+          },
+          "pi_a": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint8",
+              "minimum": 0.0
+            }
+          },
+          "pi_b": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint8",
+              "minimum": 0.0
+            }
+          },
+          "pi_c": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint8",
+              "minimum": 0.0
+            }
+          },
+          "protocol": {
+            "$ref": "#/definitions/HsZkProtocols"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HsZkProtocols": {
+        "type": "string",
+        "enum": [
+          "groth16"
+        ]
+      },
+      "HsZkProtocolsCurvs": {
+        "type": "string",
+        "enum": [
+          "bn128"
+        ]
+      },
+      "HypersignKYCProof": {
+        "type": "object",
+        "required": [
+          "zk_proof"
+        ],
+        "properties": {
+          "credential_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "zk_proof": {
+            "$ref": "#/definitions/ZkProof"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HypersignKYCProofTypes": {
+        "type": "string",
+        "enum": [
+          "zk_proof_of_personhood",
+          "zk_proof_of_k_y_c",
+          "zk_proof_of_age"
+        ]
+      },
+      "ZkProof": {
+        "type": "object",
+        "required": [
+          "proof",
+          "proof_type",
+          "public_signales"
+        ],
+        "properties": {
+          "proof": {
+            "$ref": "#/definitions/HsZkProof"
+          },
+          "proof_type": {
+            "$ref": "#/definitions/HypersignKYCProofTypes"
+          },
+          "public_signales": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
   },
   "query": {
     "$schema": "http://json-schema.org/draft-07/schema#",
