@@ -3,6 +3,8 @@ import NibiruSupportedTestnetChains from './cosmos/wallet/nibi/nibiru-testnet-1/
 import OsmosisSupportedTestnetChains from './cosmos/wallet/osmo/osmo-test-5/chains.json'
 import NibiruSupportedMainnetChains from './cosmos/wallet/nibi/cataclysm-1/chains.json'
 
+import DiamSupportedTestnetChains from './stellar/wallet/diam/testnet/chains.json';
+
 
 export function getCosmosSupportedChains() {
     return [
@@ -12,10 +14,15 @@ export function getCosmosSupportedChains() {
         ...NibiruSupportedMainnetChains
     ]
 }
-
+export function getStellarSupportedChains() {
+    return [
+        ...DiamSupportedTestnetChains
+    ]
+}
 export function getSupportedChains() {
     return {
         interchain: [...getCosmosSupportedChains()],
+        stellar: [...getStellarSupportedChains()]
     }
 }
 
