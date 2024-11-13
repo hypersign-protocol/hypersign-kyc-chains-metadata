@@ -1,6 +1,6 @@
 [
     {
-        "chainId": "testnet",
+        "chainId": "Diamante Testnet 2024",
         "chainName": "Dimante (testnet)",
         "rpc": "https://diamtestnet.diamcircle.io",
         "rest": "", 
@@ -9,7 +9,7 @@
             "coinMinimalDenom": "unibi",
             "coinDecimals": 6,
             "coinGeckoId": "diam",
-            "coinImageUrl": "https://framerusercontent.com/images/hCJipfYt6QNf2M7IkkKiSiZ5t0.png"
+            "coinImageUrl": "https://i.ibb.co/djMJrB1/unnamed.png"
         },
         "bip44": {
             "coinType": 118
@@ -28,7 +28,7 @@
                 "coinMinimalDenom": "unibi",
                 "coinDecimals": 6,
                 "coinGeckoId": "diam",
-                "coinImageUrl": "https://framerusercontent.com/images/hCJipfYt6QNf2M7IkkKiSiZ5t0.png"
+                "coinImageUrl": "https://i.ibb.co/djMJrB1/unnamed.png"
             }
         ],
         "feeCurrencies": [
@@ -37,7 +37,7 @@
                 "coinMinimalDenom": "unibi",
                 "coinDecimals": 6,
                 "coinGeckoId": "diam",
-                "coinImageUrl": "https://framerusercontent.com/images/hCJipfYt6QNf2M7IkkKiSiZ5t0.png"
+                "coinImageUrl": "https://i.ibb.co/djMJrB1/unnamed.png"
             }
         ],
         "coinType": 118,
