@@ -1,12 +1,12 @@
-import NibiruSupportedLocalnetChains from './cosmos/wallet/nibi/nibiru-localnet-0/chains.json'
-import NibiruSupportedTestnetChains from './cosmos/wallet/nibi/nibiru-testnet-1/chains.json'
-import OsmosisSupportedTestnetChains from './cosmos/wallet/osmo/osmo-test-5/chains.json'
-import NibiruSupportedMainnetChains from './cosmos/wallet/nibi/cataclysm-1/chains.json'
+const NibiruSupportedLocalnetChains = require('./cosmos/wallet/nibi/nibiru-localnet-0/chains.json')
+const NibiruSupportedTestnetChains = require('./cosmos/wallet/nibi/nibiru-testnet-1/chains.json')
+const OsmosisSupportedTestnetChains = require('./cosmos/wallet/osmo/osmo-test-5/chains.json')
+const NibiruSupportedMainnetChains = require('./cosmos/wallet/nibi/cataclysm-1/chains.json')
 
-import DiamSupportedTestnetChains from './stellar/wallet/diam/Diamante Testnet 2024/chains.json';
+const DiamSupportedTestnetChains = require('./stellar/wallet/diam/Diamante Testnet 2024/chains.json')
 
 
-export function getCosmosSupportedChains() {
+function getCosmosSupportedChains() {
     return [
         ...NibiruSupportedLocalnetChains,
         ...NibiruSupportedTestnetChains,
@@ -14,15 +14,22 @@ export function getCosmosSupportedChains() {
         ...NibiruSupportedMainnetChains
     ]
 }
-export function getStellarSupportedChains() {
+function getStellarSupportedChains() {
     return [
         ...DiamSupportedTestnetChains
     ]
 }
-export function getSupportedChains() {
+function getSupportedChains() {
     return {
         interchain: [...getCosmosSupportedChains()],
         stellar: [...getStellarSupportedChains()]
     }
 }
 
+
+module.exports = {
+    getCosmosSupportedChains,
+    getStellarSupportedChains,
+    getSupportedChains
+
+}
