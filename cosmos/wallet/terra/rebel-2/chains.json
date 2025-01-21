@@ -1,0 +1,56 @@
+[
+  {
+    "chainId": "rebel-2",
+    "chainName": "Terra Classic (testnet)",
+    "rpc": "https://rpc.luncblaze.com",
+    "rest": "https://lcd.luncblaze.com",
+    "stakeCurrency": {
+      "coinDenom": "LUNC",
+      "coinMinimalDenom": "uluna",
+      "coinDecimals": 6,
+      "coinGeckoId": "terra-luna",
+      "coinImageUrl": "https://assets.coingecko.com/coins/images/25767/standard/01_Luna_color.png"
+    },
+    "bip44": {
+      "coinType": 118
+    },
+    "bech32Config": {
+      "bech32PrefixAccAddr": "terra",
+      "bech32PrefixAccPub": "terrapub",
+      "bech32PrefixValAddr": "terravaloper",
+      "bech32PrefixValPub": "terravaloperpub",
+      "bech32PrefixConsAddr": "terravalcons",
+      "bech32PrefixConsPub": "terravalconspub"
+    },
+    "currencies": [
+      {
+        "coinDenom": "LUNC",
+        "coinMinimalDenom": "uluna",
+        "coinDecimals": 6,
+        "coinGeckoId": "terra-luna",
+        "coinImageUrl": "https://assets.coingecko.com/coins/images/25767/standard/01_Luna_color.png"
+      }
+    ],
+    "feeCurrencies": [
+      {
+        "coinDenom": "LUNC",
+        "coinMinimalDenom": "uluna",
+        "coinDecimals": 6,
+        "coinGeckoId": "terra-luna",
+        "coinImageUrl": "https://assets.coingecko.com/coins/images/25767/standard/01_Luna_color.png"
+      }
+    ],
+    "coinType": 118,
+    "gasPriceStep": {
+      "low": 28.325,
+      "average": 28.325,
+      "high": 28.325
+    },
+    "features": ["ibc-transfer", "ibc-go", "cosmwasm"],
+    "txExplorer": {
+      "name": "Terra Finder",
+      "txUrl": "https://rpc.luncblaze.com/tx?hash={txHash}",
+      "themeColor": "white"
+    }
+  }
+]
