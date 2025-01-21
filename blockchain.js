@@ -2,16 +2,17 @@ const NibiruSupportedLocalnetChains = require('./cosmos/wallet/nibi/nibiru-local
 const NibiruSupportedTestnetChains = require('./cosmos/wallet/nibi/nibiru-testnet-1/chains.json')
 const OsmosisSupportedTestnetChains = require('./cosmos/wallet/osmo/osmo-test-5/chains.json')
 const NibiruSupportedMainnetChains = require('./cosmos/wallet/nibi/cataclysm-1/chains.json')
+const TerraSupportedTestnetChains = require('./cosmos/wallet/terra/rebel-2/chains.json')
 
 const DiamSupportedTestnetChains = require('./stellar/wallet/diam/Diamante Testnet 2024/chains.json')
-
 
 function getCosmosSupportedChains() {
     return [
         ...NibiruSupportedLocalnetChains,
         ...NibiruSupportedTestnetChains,
         ...OsmosisSupportedTestnetChains,
-        ...NibiruSupportedMainnetChains
+        ...NibiruSupportedMainnetChains,
+        ...TerraSupportedTestnetChains
     ]
 }
 function getStellarSupportedChains() {
