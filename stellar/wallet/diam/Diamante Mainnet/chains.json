@@ -1,6 +1,6 @@
 [
     {
-        "chainId": "Diamante",
+        "chainId": "Diamante MainNet; SEP 2022",
         "chainName": "Dimante",
         "rpc": "https://mainnet.diamcircle.io",
         "rest": "", 
