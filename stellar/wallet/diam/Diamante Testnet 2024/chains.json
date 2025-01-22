@@ -9,7 +9,7 @@
             "coinMinimalDenom": "unibi",
             "coinDecimals": 6,
             "coinGeckoId": "diam",
-            "coinImageUrl": "https://i.ibb.co/djMJrB1/unnamed.png"
+            "coinImageUrl": "https://storage.googleapis.com/fyre-image-storage/Diamante_Black_Vertical.png"
         },
         "bip44": {
             "coinType": 118
@@ -28,7 +28,7 @@
                 "coinMinimalDenom": "unibi",
                 "coinDecimals": 6,
                 "coinGeckoId": "diam",
-                "coinImageUrl": "https://i.ibb.co/djMJrB1/unnamed.png"
+                "coinImageUrl": "https://storage.googleapis.com/fyre-image-storage/Diamante_Black_Vertical.png"
             }
         ],
         "feeCurrencies": [
@@ -37,7 +37,7 @@
                 "coinMinimalDenom": "unibi",
                 "coinDecimals": 6,
                 "coinGeckoId": "diam",
-                "coinImageUrl": "https://i.ibb.co/djMJrB1/unnamed.png"
+                "coinImageUrl": "https://storage.googleapis.com/fyre-image-storage/Diamante_Black_Vertical.png"
             }
         ],
         "coinType": 118,
