@@ -1,7 +1,7 @@
 [
     {
-        "chainId": "Diamante Mainnet",
-        "chainName": "Dimante (Mainnet)",
+        "chainId": "Diamante",
+        "chainName": "Dimante",
         "rpc": "https://mainnet.diamcircle.io",
         "rest": "", 
         "stakeCurrency": {
