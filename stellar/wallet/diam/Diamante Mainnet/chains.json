@@ -1,0 +1,60 @@
+[
+    {
+        "chainId": "Diamante Mainnet",
+        "chainName": "Dimante (Mainnet)",
+        "rpc": "https://mainnet.diamcircle.io",
+        "rest": "", 
+        "stakeCurrency": {
+            "coinDenom": "DIAM",
+            "coinMinimalDenom": "unibi",
+            "coinDecimals": 6,
+            "coinGeckoId": "diam",
+            "coinImageUrl": "https://storage.googleapis.com/fyre-image-storage/Diamante_Black_Vertical.png"
+        },
+        "bip44": {
+            "coinType": 118
+        },
+        "bech32Config": {
+            "bech32PrefixAccAddr": "diam",
+            "bech32PrefixAccPub": "nibipub",
+            "bech32PrefixValAddr": "nibivaloper",
+            "bech32PrefixValPub": "nibivaloperpub",
+            "bech32PrefixConsAddr": "nibivalcons",
+            "bech32PrefixConsPub": "nibivalconspub"
+        },
+        "currencies": [
+            {
+                "coinDenom": "DIAM",
+                "coinMinimalDenom": "unibi",
+                "coinDecimals": 6,
+                "coinGeckoId": "diam",
+                "coinImageUrl": "https://storage.googleapis.com/fyre-image-storage/Diamante_Black_Vertical.png"
+            }
+        ],
+        "feeCurrencies": [
+            {
+                "coinDenom": "DIAM",
+                "coinMinimalDenom": "unibi",
+                "coinDecimals": 6,
+                "coinGeckoId": "diam",
+                "coinImageUrl": "https://storage.googleapis.com/fyre-image-storage/Diamante_Black_Vertical.png"
+            }
+        ],
+        "coinType": 118,
+        "gasPriceStep": {
+            "low": 0.01,
+            "average": 0.025,
+            "high": 0.04
+        },
+        "features": [
+            "ibc-transfer",
+            "ibc-go",
+            "cosmwasm"
+        ],
+        "txExplorer": {
+            "name": "Local",
+            "txUrl": "https://rpc.nibiru.fi/tx?hash={txHash}",
+            "themeColor": "white"
+        }
+    }
+]
