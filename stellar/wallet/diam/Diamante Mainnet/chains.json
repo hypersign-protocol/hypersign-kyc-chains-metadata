@@ -1,8 +1,8 @@
 [
     {
-        "chainId": "Diamante Testnet 2024",
-        "chainName": "Dimante (testnet)",
-        "rpc": "https://diamtestnet.diamcircle.io",
+        "chainId": "Diamante",
+        "chainName": "Dimante",
+        "rpc": "https://mainnet.diamcircle.io",
         "rest": "", 
         "stakeCurrency": {
             "coinDenom": "DIAM",
